@@ -1,0 +1,18 @@
+﻿@model KRWTransfer.Models.Transaction
+
+@{
+    ViewData["Title"] = "Transfer";
+}
+
+<h1>Transfer</h1>
+
+@using (Html.BeginForm("Send", "Transaction", FormMethod.Post))
+{
+    @*<p>@Model.FromUsername = @User.Identity.Name;</p>*@
+
+    <p>@Html.DisplayFor(x => x.FromUsername)</p>
+    <p>To name: @Html.TextBoxFor(x => x.ToUsername)</p>
+    <p>Coins: @Html.TextBoxFor(x => x.Coins)</p>
+
+    <button type="submit">Send</button>
+}

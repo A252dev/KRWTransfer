@@ -1,0 +1,15 @@
+﻿@model IEnumerable<KRWTransfer.Models.UserModel>
+
+<h1>Users:</h1>
+
+@using (Html.BeginForm("UserList", "Account", FormMethod.Post))
+{
+    @foreach (var user in Model)
+    {
+        <p>@Html.DisplayName("Username: ") @user.UserName</p>
+        <p>@Html.DisplayName("Email: ") @user.Email</p>
+        <p>@Html.DisplayName("PassHash: ") @user.PasswordHash</p>
+
+        <button type="submit">Delete</button>
+    }
+}
