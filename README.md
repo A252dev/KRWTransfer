@@ -1,2 +1,2 @@
 # KRWTransfer
-Test project for the f***ing transfers
+Test project for the transfers
